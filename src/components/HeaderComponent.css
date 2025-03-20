@@ -1,0 +1,5 @@
+.logoComp{
+    display: flex;
+    justify-content: left;
+    background-color: lightgray;
+}

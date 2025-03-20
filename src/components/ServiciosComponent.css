@@ -1,0 +1,20 @@
+.servicios {
+    text-align: center;
+    
+    padding: 20px;
+    background-color: lightcoral;
+}
+
+.servicios h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.serviciosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 10px;
+}

@@ -1,0 +1,18 @@
+.midSection{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 50px 0px;
+    background-color: lightcoral;
+}
+
+.midSectionDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.midSectionImg{
+    max-width: 100px;
+    max-height: 100px;
+}
