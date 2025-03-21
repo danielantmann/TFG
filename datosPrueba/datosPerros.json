@@ -1,0 +1,44 @@
+{
+  "perros": [
+    {
+      "id": "1",
+      "nombre": "Rex",
+      "raza": "Pastor Alemán",
+      "edad": 5,
+      "dueño": "Juan Pérez",
+      "observaciones": "ultimo corte 2 euros\nultimo corte 10 euros"
+    },
+    {
+      "id": "2",
+      "nombre": "Milo",
+      "raza": "Beagle",
+      "edad": 3,
+      "dueño": "Ana Gómez",
+      "observaciones": "Alegre pero tiene tendencia a huir."
+    },
+    {
+      "id": "3",
+      "nombre": "Luna",
+      "raza": "Golden Retriever",
+      "edad": 2,
+      "dueño": "Sofía López",
+      "observaciones": "Se lleva bien con niños y otros perros."
+    },
+    {
+      "id": "4",
+      "nombre": "Bella",
+      "raza": "Bulldog",
+      "edad": 4,
+      "dueño": "Carlos Martínez",
+      "observaciones": "Tranquila pero necesita cuidado especial por su raza."
+    },
+    {
+      "id": "5",
+      "nombre": "Charlie",
+      "raza": "Caniche",
+      "edad": 6,
+      "dueño": "Laura Fernández",
+      "observaciones": "Muy inteligente y le encanta aprender trucos nuevos."
+    }
+  ]
+}
