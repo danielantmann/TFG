@@ -6,7 +6,7 @@
       "raza": "Pastor Alemán",
       "edad": 5,
       "dueño": "Juan Pérez",
-      "observaciones": "ultimo corte 2 euros\nultimo corte 10 euros"
+      "observaciones": "s"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "raza": "Beagle",
       "edad": 3,
       "dueño": "Ana Gómez",
-      "observaciones": "Alegre pero tiene tendencia a huir."
+      "observaciones": "juan"
     },
     {
       "id": "3",
@@ -39,6 +39,46 @@
       "edad": 6,
       "dueño": "Laura Fernández",
       "observaciones": "Muy inteligente y le encanta aprender trucos nuevos."
+    },
+    {
+      "id": "6",
+      "nombre": "Milo",
+      "raza": "Chucho",
+      "edad": 3,
+      "dueño": "Ana Gómez",
+      "observaciones": "juan"
+    },
+    {
+      "id": "95e7",
+      "nombre": "Thor",
+      "raza": "Labrador",
+      "edad": "11",
+      "dueño": "Dani",
+      "observaciones": "Esta viejuno"
+    },
+    {
+      "id": "6833",
+      "nombre": "Thor",
+      "raza": "Labrador",
+      "edad": "11",
+      "dueño": "Dani",
+      "observaciones": ""
+    },
+    {
+      "id": "b60e",
+      "nombre": "Thor",
+      "raza": "Labrador",
+      "edad": "11",
+      "dueño": "juan",
+      "observaciones": "sadasdas"
+    },
+    {
+      "id": "09a7",
+      "nombre": "cindy",
+      "raza": "chucho",
+      "edad": "10",
+      "dueño": "cris",
+      "observaciones": "asdsa"
     }
   ]
 }

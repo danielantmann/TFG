@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 const DogModal = ({ dog, show, handleClose, handleSave }) => {
     const [observaciones, setObservaciones] = useState(dog ? dog.observaciones : '');
 
+    useEffect(() => {
+        if (dog) {
+            setObservaciones(dog.observaciones || ''); // Actualiza las observaciones al cambiar el perro
+        }
+    }, [dog]);
+    
+    
     const handleChange = (e) => {
         setObservaciones(e.target.value);
     };

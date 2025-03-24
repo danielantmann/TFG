@@ -1,40 +1,65 @@
-import React from 'react';
-import './NavComponent.css';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import LogInModal from './LogInModal';
+import { UserContext } from '../context/UserContext';
 
 export default function NavComponent() {
-    return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">Navbar</Link>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link active" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/features">Features</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/pricing">Pricing</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link disabled" to="/" aria-disabled="true">Disabled</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+  const { usuario, handleLogout } = useContext(UserContext); // Consumo del contexto
+  const [showLogInModal, setShowLogInModal] = useState(false);
+
+  const handleLogInModal = () => {
+    setShowLogInModal(!showLogInModal);
+  };
+
+  return (
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Home</Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/features">Features</Link>
+            </li>
+            {usuario === 'admin' && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/buscar">Buscar</Link>
+              </li>
+            )}
+            <li className="nav-item">
+              {usuario ? (
+                <Link className="nav-link btn btn-link" onClick={handleLogout}>
+                  Log out
+                </Link>
+              ) : (
+                <Link className="nav-link btn btn-link" onClick={handleLogInModal}>
+                  Log in
+                </Link>
+              )}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {!usuario && showLogInModal && (
+        <LogInModal
+          show={showLogInModal}
+          handleLoginModal={handleLogInModal}
+        />
+      )}
+    </nav>
+  );
 }

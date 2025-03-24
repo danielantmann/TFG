@@ -1,0 +1,60 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "password": "1234",
+      "role": "admin",
+      "name": "Admin Principal"
+    },
+    {
+      "id": 2,
+      "email": "user1@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "Juan Pérez"
+    },
+    {
+      "id": 3,
+      "email": "user2@example.com",
+      "password": "user456",
+      "role": "user",
+      "name": "Ana Gómez"
+    },
+    {
+      "id": 4,
+      "email": "guest@example.com",
+      "password": "guest123",
+      "role": "guest",
+      "name": "Carlos López"
+    },
+    {
+      "id": "0bd4",
+      "email": "dani@gmail.com",
+      "password": "dani123",
+      "role": "user",
+      "name": "Dani"
+    },
+    {
+      "id": "eb8f",
+      "email": "dani@gmail.com",
+      "password": "dani1234",
+      "role": "user",
+      "name": "Dani"
+    },
+    {
+      "id": "e7f1",
+      "email": "dani@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "name": "Dani"
+    },
+    {
+      "id": "972b",
+      "email": "cr22222@charlesriverlabs.com",
+      "password": "123",
+      "role": "user",
+      "name": "Cristina Gosalvez Boza"
+    }
+  ]
+}
