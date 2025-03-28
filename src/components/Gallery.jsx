@@ -15,17 +15,18 @@ const images = [
 
 function Gallery() {
     return (
-       <div className="galery"> 
-        <div className="galleryContainer">
-            <div className="gallery">
-                {images.map((image, index) => (
-                    <div className="gallery-item" key={index}>
-                        <img className="gallery-img" src={image} alt={`Gallery item ${index + 1}`} />
-                    </div>
-                ))}
+        <div className="gallery">
+            <div className="container ">
+                <div className="row pt-5 pb-5">
+                    {images.map((image, index) => (
+                        <div className="gallery-img col-lg-4 col-md-6 col-12 p-3 " key={index}>
+                            <img className="rounded w-100 h-100 img-fluid" src={image} alt={`Gallery item ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
-        </div>
+
     )
 }
 

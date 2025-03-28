@@ -17,7 +17,7 @@ function CardWithBtn({ cardImg, cardTitle, cardText, btnTxt, href, boolean = tru
   const handleClose = () => setShowModal(false);
 
   return (
-    <div>
+    <div className='col-xl-3 col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center mt-3 mb-3'>
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={cardImg} />
         <Card.Body>
