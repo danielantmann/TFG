@@ -1,7 +1,5 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import PerreteGrooming from '../assets/img/perretegrooming.jpg';
-import PerreteGrooming2 from '../assets/img/perretegrooming2.jpg';
 import PerreteGrooming3 from '../assets/img/perretegrooming3.jpg';
 import PerreteGrooming4 from '../assets/img/corte-pelo.jpg';
 import PerreteGrooming5 from '../assets/img/cortar-pelo2.jpg';

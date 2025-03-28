@@ -87,6 +87,14 @@
       "edad": "2",
       "dueño": "juan",
       "observaciones": "asd"
+    },
+    {
+      "id": "cc01",
+      "nombre": "piripi",
+      "raza": "labrador",
+      "edad": "11",
+      "dueño": "juan",
+      "observaciones": "asdasd"
     }
   ]
 }
