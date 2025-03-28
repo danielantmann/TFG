@@ -55,6 +55,13 @@
       "password": "123",
       "role": "user",
       "name": "Cristina Gosalvez Boza"
+    },
+    {
+      "id": "b2a4",
+      "email": "juan@juan",
+      "password": "12345",
+      "role": "user",
+      "name": "jua"
     }
   ]
 }

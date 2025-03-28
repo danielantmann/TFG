@@ -79,6 +79,14 @@
       "edad": "10",
       "dueño": "cris",
       "observaciones": "asdsa"
+    },
+    {
+      "id": "a64e",
+      "nombre": "piripi",
+      "raza": "chucu",
+      "edad": "2",
+      "dueño": "juan",
+      "observaciones": "asd"
     }
   ]
 }
