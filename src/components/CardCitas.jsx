@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export default function CardCitas() {
     return (
         <div className="card mb-3" style={{ maxWidth: "80%", justifyContent: "center", margin: "auto" }}>
@@ -23,8 +23,11 @@ export default function CardCitas() {
 
             </div>
             <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="button" className="btn btn-outline-info">Ir al Calendario</button>
+                <Link to ='/admincitas'>
+                    <button type="button" className="btn btn-outline-info">Ir al Calendario</button>
+                </Link>
             </div>
+
         </div>
     );
 }

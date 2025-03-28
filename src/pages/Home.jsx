@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderComponent from '../components/HeaderComponent'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import CarruselComponent from '../components/CarruselComponent'
 import MidSecComponent from '../components/MidSecComponent'
 import Gallery from '../components/Gallery'
