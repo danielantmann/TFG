@@ -6,12 +6,13 @@ import App from './App';
 import { createRoot } from 'react-dom/client';
 
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Router>
+
+  <StrictMode>
+    <BrowserRouter>
       <UserProvider>
         <App />
       </UserProvider>
-    </Router>
-  </React.StrictMode>,
-
+    </BrowserRouter>
+  </StrictMode>
 );
+

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import React, { useContext, useEffect } from 'react';
 import Home from './pages/Home.jsx';
 import BuscadorFichas from './pages/BuscadorFichas.jsx';
@@ -8,6 +8,7 @@ import HomeAdmin from './pages/HomeAdmin.jsx';
 import HomeUser from './pages/HomeUser.jsx';
 import FormAltaAdmin from './pages/FormAltaAdmin.jsx';
 import CitasAdmin from './pages/CitasAdmin.jsx';
+
 import CalendarioAdmin from './components/CalendarioAdmin.jsx';
 import { Navigate } from 'react-router-dom';
 
@@ -33,9 +34,9 @@ function App() {
       <Route
         path="/admincitas"
         element={usuario === 'admin' ? <CitasAdmin /> : <Navigate to="/home" replace/>}
-      />
 
-      
+
+      />
     </Routes>
   );
 }

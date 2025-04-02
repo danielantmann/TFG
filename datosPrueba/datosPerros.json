@@ -5,8 +5,7 @@
       "nombre": "Rex",
       "raza": "Pastor Alemán",
       "edad": 5,
-      "id_usuario": 2,
-      "observaciones": "syy"
+
     },
     {
       "id": "2",
@@ -23,6 +22,7 @@
       "edad": 2,
       "id_usuario": 2,
       "observaciones": "Se lleva bien con niños y otros perros."
+
     }
   ]
 }

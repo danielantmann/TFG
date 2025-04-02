@@ -3,6 +3,7 @@ import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
 function LogInModal({ show, handleLoginModal }) {
+
     const { setUsuario, setIdUsuario } = useContext(UserContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -46,46 +47,60 @@ function LogInModal({ show, handleLoginModal }) {
         }
     };
 
-    return (
-        <div className={`modal fade ${show ? 'show d-block' : 'd-none'}`} tabIndex="-1">
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h5 className="modal-title">Iniciar Sesión</h5>
-                        <button type="button" className="btn-close" onClick={handleLoginModal}></button>
-                    </div>
-                    <div className="modal-body">
-                        <form onSubmit={handleLogin}>
-                            <div className="mb-3">
-                                <label htmlFor="email" className="form-label">Email:</label>
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    id="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Contraseña:</label>
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    id="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                />
-                            </div>
-                            <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
-                            {error && <p style={{ color: 'red' }}>{error}</p>}
-                        </form>
-                    </div>
-                </div>
+  
+  // Nueva función para redireccionar al componente (por ejemplo, de registro)
+  const handleIrARegistro = () => {
+    // Aquí puedes poner la ruta que desees, por ejemplo '/registro'
+    navigate('/registro');
+    handleLoginModal(); // Opcional: cierra el modal si lo deseas
+  };
+
+  return (
+    <div className={`modal fade ${show ? 'show d-block' : 'd-none'}`} tabIndex="-1">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title">Iniciar Sesión</h5>
+            <button type="button" className="btn-close" onClick={handleLoginModal}></button>
+          </div>
+          <div className="modal-body">
+            <form onSubmit={handleLogin}>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">Email:</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label">Contraseña:</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
+              {error && <p style={{ color: 'red' }}>{error}</p>}
+            </form>
+            {/* Botón extra para redirigir al componente "Registro" */}
+            <div className="mt-3">
+              <button type="button" className="btn btn-secondary" onClick={handleIrARegistro}>
+                ¿No tienes cuenta? Regístrate
+              </button>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default LogInModal;
