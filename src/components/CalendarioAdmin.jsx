@@ -95,8 +95,8 @@ const CalendarioAdmin = () => {
       // Creación del objeto evento sin forzar el id en POST
       const eventoObj = {
         title: nuevoEvento.title,
-        start: startDate.toISOString(),
-        end: endDate.toISOString(),
+        start: moment(startDate).format("YYYY-MM-DDTHH:mm:ss"), // Formato local
+        end: moment(endDate).format("YYYY-MM-DDTHH:mm:ss")
       };
 
       try {

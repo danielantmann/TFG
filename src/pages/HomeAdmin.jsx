@@ -6,16 +6,11 @@ import AdminGestion from '../components/AdminGestion'
 
 function HomeAdmin() {
   return (
-    <>
-   
-      
-   
+    <> 
     <HeaderComponent/>
     <AdminGestion/>
     <h1>Proxima Cita: </h1>
     <CardCitas/>
-
-  
     </>
   )
 }

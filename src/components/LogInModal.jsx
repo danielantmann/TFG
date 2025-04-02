@@ -1,19 +1,21 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../context/UserContext';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
 
 function LogInModal({ show, handleLoginModal }) {
-    const { setUsuario } = useContext(UserContext); // Accede al contexto
+    const { setUsuario, setIdUsuario } = useContext(UserContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate(); // Inicializa useNavigate para redirección
+    const navigate = useNavigate();
 
     const handleRedirect = (role) => {
         if (role === 'admin') {
-            navigate('/adminhome'); // Redirige a /buscar si el rol es admin
+            navigate('/adminhome');
+        } else if (role === 'user') {
+            navigate('/userhome');
         } else {
-            navigate('/home'); // Redirige a /home si el rol no es admin
+            navigate('/home');
         }
     };
 
@@ -29,9 +31,12 @@ function LogInModal({ show, handleLoginModal }) {
                 (u) => u.email === email && u.password === password
             );
             if (user) {
-                sessionStorage.setItem('role', user.role); // Almacena el rol
+                // Guardamos el role y id en sessionStorage para persistir al recargar
+                sessionStorage.setItem('role', user.role);
+                sessionStorage.setItem('id', user.id);
                 setUsuario(user.role); // Actualiza el estado global
-                handleRedirect(user.role); // Llama a la función de redirección
+                setIdUsuario(user.id); // Establece el id del usuario
+                handleRedirect(user.role); // Redirige a la página correspondiente
                 handleLoginModal(); // Cierra el modal
             } else {
                 setError('Correo o contraseña incorrectos.');
