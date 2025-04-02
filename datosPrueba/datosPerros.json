@@ -4,8 +4,8 @@
       "id": "1",
       "nombre": "Rex",
       "raza": "Pastor Alemán",
-      "edad": 5,
-
+      "id_usuario": 3,
+      "edad": 5
     },
     {
       "id": "2",
@@ -20,9 +20,16 @@
       "nombre": "Luna",
       "raza": "Golden Retriever",
       "edad": 2,
-      "id_usuario": 2,
+      "id_usuario": 5,
       "observaciones": "Se lleva bien con niños y otros perros."
-
+    },
+    {
+      "id": "3b9f",
+      "nombre": "Thor",
+      "raza": "Labrador",
+      "edad": "11",
+      "dueño": "Dani",
+      "observaciones": "sdfs"
     }
   ]
 }

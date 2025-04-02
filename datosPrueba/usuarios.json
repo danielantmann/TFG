@@ -29,11 +29,17 @@
       "name": "Carlos López"
     },
     {
-      "id": 5,
+      "id": "5",
       "email": "guesst@example.com",
       "password": "guest1233",
       "role": "user"
-
+    },
+    {
+      "id": "231d",
+      "email": "pepe@pepe.com",
+      "password": "1234",
+      "role": "user",
+      "name": "DANIEL ERIC ANTMANN"
     }
   ]
 }

@@ -34,9 +34,11 @@ export default function CardCitas() {
             try {
                 const response = await fetch(`http://localhost:3000/perros`);
                 const data = await response.json();
+               
+                
                 const perroDelUsuario = data.find(p => p.id_usuario === idUsuario);
                 setPerro(perroDelUsuario);
-                console.log(perroDelUsuario);
+                console.log("perro usuario" + perroDelUsuario);
                 
             } catch (error) {
                 console.error("Error al cargar los perros:", error);
