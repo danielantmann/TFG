@@ -69,6 +69,13 @@
       "password": "1234",
       "role": "user",
       "name": "juan"
+    },
+    {
+      "id": "56e5",
+      "email": "juan@juan",
+      "password": "123465",
+      "role": "user",
+      "name": "Juan"
     }
   ]
 }

@@ -6,7 +6,7 @@
       "raza": "Pastor Alemán",
       "edad": 5,
       "dueño": "Juan Pérez",
-      "observaciones": "s"
+      "observaciones": "29/3 10 ueros, baño, muchos nudos, ultimo 4/4 corte"
     },
     {
       "id": "2",
@@ -95,6 +95,14 @@
       "edad": "11",
       "dueño": "juan",
       "observaciones": "asdasd"
+    },
+    {
+      "id": "457d",
+      "nombre": "Pepe",
+      "raza": "chucho",
+      "edad": "5",
+      "dueño": "Juan",
+      "observaciones": ""
     }
   ]
 }
