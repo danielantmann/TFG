@@ -12,7 +12,9 @@ function App() {
   const { usuario, loading } = useContext(UserContext); // Usa el usuario y loading del contexto
 
   useEffect(() => {
-    console.log('Rol restaurado desde contexto:', usuario);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Rol restaurado desde contexto:', usuario);
+    }
   }, [usuario]);
 
   // Mientras se carga (restaura) el rol, mostramos un estado de carga
