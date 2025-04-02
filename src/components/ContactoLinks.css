@@ -1,11 +1,4 @@
-.contacto-container{
-    max-width: 900px;
-    margin:auto;
-    padding: 30px 0;
-}
-.card-container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+
 justify-items: center;
 gap: 10px;
 }

@@ -12,37 +12,37 @@ export default function ContactoLinks() {
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
-    <div className="contacto-container">
-      <div className="card-container">
-        {/* Calendario */}
-        <CardWithBtn
-          cardImg={Calendar}
-          cardTitle="Citas Online"
-          cardText="Ver el calendario para solicitar una cita"
-          btnTxt="IR"
-          href="#"
-          boolean={false} // No se necesita modal aquí
-        />
+    <div className="container">
+      <div className="row justify-content-center">
+          {/* Calendario */}
+          <CardWithBtn
+            cardImg={Calendar}
+            cardTitle="Citas Online"
+            cardText="Ver el calendario para solicitar una cita"
+            btnTxt="IR"
+            href="#"
+            boolean={false} // No se necesita modal aquí
+          />
 
-        {/* WhatsApp */}
-        <CardWithBtn
-          cardImg={WhatsApp}
-          cardTitle="WhatsApp"
-          cardText="Ponte En contacto mediante WhatsApp"
-          btnTxt="IR"
-          href={whatsappURL}
-          boolean={false} // No se necesita modal aquí
-        />
+          {/* WhatsApp */}
+          <CardWithBtn
+            cardImg={WhatsApp}
+            cardTitle="WhatsApp"
+            cardText="Ponte En contacto mediante WhatsApp"
+            btnTxt="IR"
+            href={whatsappURL}
+            boolean={false} // No se necesita modal aquí
+          />
 
-        {/* Email */}
-        <CardWithBtn
-          cardImg={Email}
-          cardTitle="E-mail"
-          cardText="Ponte En contacto mediante E-mail"
-          btnTxt="IR"
-          boolean={true} // Usamos el modal
-          EmailModal={EmailModal} // Pasamos el EmailModal como prop
-        />
+          {/* Email */}
+          <CardWithBtn
+            cardImg={Email}
+            cardTitle="E-mail"
+            cardText="Ponte En contacto mediante E-mail"
+            btnTxt="IR"
+            boolean={true} // Usamos el modal
+            EmailModal={EmailModal} // Pasamos el EmailModal como prop
+          />
       </div>
     </div>
   );

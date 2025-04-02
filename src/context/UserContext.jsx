@@ -4,27 +4,41 @@ import { useNavigate } from 'react-router-dom';
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [usuario, setUsuario] = useState('');
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const savedRole = sessionStorage.getItem('role');
-    if (savedRole) {
-      setUsuario(savedRole);
-    }
-    setLoading(false);
-  }, []);
+    const [usuario, setUsuario] = useState('');
+    const [idUsuario, setIdUsuario] = useState('');
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
-  const handleLogout = () => {
-    sessionStorage.removeItem('role');
-    setUsuario('');
-    navigate('/home', { replace: true });
-  };
+    useEffect(() => {
+        // Recupera los datos del usuario desde sessionStorage
+        const savedRole = sessionStorage.getItem('role');
+        const savedIdUsuario = sessionStorage.getItem('id');
+        
+        if (savedRole) {
+            setUsuario(savedRole); // Establece el rol del usuario
+        }
+        
+        if (savedIdUsuario) {
+            setIdUsuario(savedIdUsuario); // Establece el id del usuario
+        }
+        
+        setLoading(false); // Termina la carga
+    }, []);
 
-  return (
-    <UserContext.Provider value={{ usuario, setUsuario, loading, handleLogout }}>
-      {children}
-    </UserContext.Provider>
-  );
+    const handleLogout = () => {
+        sessionStorage.removeItem('role');
+        sessionStorage.removeItem('id');
+        sessionStorage.removeItem('primeraCita');
+        setUsuario('');
+        setIdUsuario('');
+        navigate('/home');
+    };
+
+    return (
+        <UserContext.Provider value={{ usuario, setUsuario, loading, handleLogout, idUsuario, setIdUsuario }}>
+            {children}
+        </UserContext.Provider>
+    );
 };
+

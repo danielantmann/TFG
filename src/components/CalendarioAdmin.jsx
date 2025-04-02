@@ -18,6 +18,7 @@ const CalendarioAdmin = () => {
   const [modoEdicion, setModoEdicion] = useState(false);
   const [eventoSeleccionado, setEventoSeleccionado] = useState(null);
   const [slotInfo, setSlotInfo] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const API_URL = "http://localhost:3003/citas"; // URL de tu API
 

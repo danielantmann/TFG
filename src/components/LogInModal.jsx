@@ -1,46 +1,53 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../context/UserContext';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
 
 function LogInModal({ show, handleLoginModal }) {
-  const { setUsuario } = useContext(UserContext); // Accede al contexto
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate(); // Inicializa useNavigate para redirección
 
-  const handleRedirect = (role) => {
-    if (role === 'admin') {
-      navigate('/adminhome'); // Redirige a /adminhome si el rol es admin
-    } else {
-      navigate('/home'); // Redirige a /home si el rol no es admin
-    }
-  };
+    const { setUsuario, setIdUsuario } = useContext(UserContext);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:3001/usuarios');
-      if (!response.ok) {
-        throw new Error('Error en la petición');
-      }
-      const usuarios = await response.json();
-      const user = usuarios.find(
-        (u) => u.email === email && u.password === password
-      );
-      if (user) {
-        sessionStorage.setItem('role', user.role); // Almacena el rol
-        setUsuario(user.role); // Actualiza el estado global
-        handleRedirect(user.role); // Llama a la función de redirección
-        handleLoginModal(); // Cierra el modal
-      } else {
-        setError('Correo o contraseña incorrectos.');
-      }
-    } catch (error) {
-      setError('Hubo un problema al iniciar sesión. Inténtalo más tarde.');
-    }
-  };
+    const handleRedirect = (role) => {
+        if (role === 'admin') {
+            navigate('/adminhome');
+        } else if (role === 'user') {
+            navigate('/userhome');
+        } else {
+            navigate('/home');
+        }
+    };
 
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:3001/usuarios');
+            if (!response.ok) {
+                throw new Error('Error en la petición');
+            }
+            const usuarios = await response.json();
+            const user = usuarios.find(
+                (u) => u.email === email && u.password === password
+            );
+            if (user) {
+                // Guardamos el role y id en sessionStorage para persistir al recargar
+                sessionStorage.setItem('role', user.role);
+                sessionStorage.setItem('id', user.id);
+                setUsuario(user.role); // Actualiza el estado global
+                setIdUsuario(user.id); // Establece el id del usuario
+                handleRedirect(user.role); // Redirige a la página correspondiente
+                handleLoginModal(); // Cierra el modal
+            } else {
+                setError('Correo o contraseña incorrectos.');
+            }
+        } catch (error) {
+            setError('Hubo un problema al iniciar sesión. Inténtalo más tarde.');
+        }
+    };
+
+  
   // Nueva función para redireccionar al componente (por ejemplo, de registro)
   const handleIrARegistro = () => {
     // Aquí puedes poner la ruta que desees, por ejemplo '/registro'

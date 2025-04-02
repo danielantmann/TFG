@@ -5,15 +5,14 @@
       "nombre": "Rex",
       "raza": "Pastor Alemán",
       "edad": 5,
-      "dueño": "Juan Pérez",
-      "observaciones": "29/3 10 ueros, baño, muchos nudos, ultimo 4/4 corte"
+
     },
     {
       "id": "2",
       "nombre": "Milo",
       "raza": "Beagle",
       "edad": 3,
-      "dueño": "Ana Gómez",
+      "id_usuario": 3,
       "observaciones": "juan"
     },
     {
@@ -21,88 +20,9 @@
       "nombre": "Luna",
       "raza": "Golden Retriever",
       "edad": 2,
-      "dueño": "Sofía López",
+      "id_usuario": 2,
       "observaciones": "Se lleva bien con niños y otros perros."
-    },
-    {
-      "id": "4",
-      "nombre": "Bella",
-      "raza": "Bulldog",
-      "edad": 4,
-      "dueño": "Carlos Martínez",
-      "observaciones": "Tranquila pero necesita cuidado especial por su raza."
-    },
-    {
-      "id": "5",
-      "nombre": "Charlie",
-      "raza": "Caniche",
-      "edad": 6,
-      "dueño": "Laura Fernández",
-      "observaciones": "Muy inteligente y le encanta aprender trucos nuevos."
-    },
-    {
-      "id": "6",
-      "nombre": "Milo",
-      "raza": "Chucho",
-      "edad": 3,
-      "dueño": "Ana Gómez",
-      "observaciones": "juan"
-    },
-    {
-      "id": "95e7",
-      "nombre": "Thor",
-      "raza": "Labrador",
-      "edad": "11",
-      "dueño": "Dani",
-      "observaciones": "Esta viejuno"
-    },
-    {
-      "id": "6833",
-      "nombre": "Thor",
-      "raza": "Labrador",
-      "edad": "11",
-      "dueño": "Dani",
-      "observaciones": ""
-    },
-    {
-      "id": "b60e",
-      "nombre": "Thor",
-      "raza": "Labrador",
-      "edad": "11",
-      "dueño": "juan",
-      "observaciones": "sadasdas"
-    },
-    {
-      "id": "09a7",
-      "nombre": "cindy",
-      "raza": "chucho",
-      "edad": "10",
-      "dueño": "cris",
-      "observaciones": "asdsa"
-    },
-    {
-      "id": "a64e",
-      "nombre": "piripi",
-      "raza": "chucu",
-      "edad": "2",
-      "dueño": "juan",
-      "observaciones": "asd"
-    },
-    {
-      "id": "cc01",
-      "nombre": "piripi",
-      "raza": "labrador",
-      "edad": "11",
-      "dueño": "juan",
-      "observaciones": "asdasd"
-    },
-    {
-      "id": "457d",
-      "nombre": "Pepe",
-      "raza": "chucho",
-      "edad": "5",
-      "dueño": "Juan",
-      "observaciones": ""
+
     }
   ]
 }

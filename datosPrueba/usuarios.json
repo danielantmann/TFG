@@ -25,57 +25,15 @@
       "id": "4",
       "email": "guest@example.com",
       "password": "guest123",
-      "role": "guest",
+      "role": "user",
       "name": "Carlos López"
     },
     {
-      "id": "0bd4",
-      "email": "dani@gmail.com",
-      "password": "dani123",
-      "role": "user",
-      "name": "Dani"
-    },
-    {
-      "id": "eb8f",
-      "email": "dani@gmail.com",
-      "password": "dani1234",
-      "role": "user",
-      "name": "Dani"
-    },
-    {
-      "id": "e7f1",
-      "email": "dani@gmail.com",
-      "password": "123456",
-      "role": "user",
-      "name": "Dani"
-    },
-    {
-      "id": "972b",
-      "email": "cr22222@charlesriverlabs.com",
-      "password": "123",
-      "role": "user",
-      "name": "Cristina Gosalvez Boza"
-    },
-    {
-      "id": "b2a4",
-      "email": "juan@juan",
-      "password": "12345",
-      "role": "user",
-      "name": "jua"
-    },
-    {
-      "id": "e8db",
-      "email": "pepe@pepe.com",
-      "password": "1234",
-      "role": "user",
-      "name": "juan"
-    },
-    {
-      "id": "56e5",
-      "email": "juan@juan",
-      "password": "123465",
-      "role": "user",
-      "name": "Juan"
+      "id": 5,
+      "email": "guesst@example.com",
+      "password": "guest1233",
+      "role": "user"
+
     }
   ]
 }
