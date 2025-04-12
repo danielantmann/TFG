@@ -1,3 +1,4 @@
+// src/components/DogModal.js
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -7,11 +8,10 @@ const DogModal = ({ dog, show, handleClose, handleSave }) => {
 
     useEffect(() => {
         if (dog) {
-            setObservaciones(dog.observaciones || ''); // Actualiza las observaciones al cambiar el perro
+            setObservaciones(dog.observaciones || '');
         }
     }, [dog]);
-    
-    
+
     const handleChange = (e) => {
         setObservaciones(e.target.value);
     };
@@ -28,8 +28,8 @@ const DogModal = ({ dog, show, handleClose, handleSave }) => {
             </Modal.Header>
             <Modal.Body>
                 <p><strong>Raza:</strong> {dog.raza}</p>
-                <p><strong>Edad:</strong> {dog.edad} años</p>
-                <p><strong>Dueño:</strong> {dog.dueño}</p>
+                <p><strong>Fecha de nacimiento:</strong> {dog.fecha_nacimiento}</p>
+                <p><strong>Dueño:</strong> {dog.dueño}</p> {/* 👈 Mostramos el nombre del dueño */}
                 <p><strong>Observaciones:</strong></p>
                 <textarea
                     value={observaciones}

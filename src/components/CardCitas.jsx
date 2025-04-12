@@ -11,7 +11,7 @@ export default function CardCitas() {
         const storedCita = sessionStorage.getItem('primeraCita');
         return storedCita ? JSON.parse(storedCita) : null;
     });
-        const time = new Date();
+    const time = new Date();
 
     useEffect(() => {
         const obtenerCitas = async () => {
@@ -23,7 +23,7 @@ export default function CardCitas() {
                 if (citasOrdenadas.length > 0) {
                     setPrimeraCita(citasOrdenadas[0]);
                 }
-                setCitas(citasOrdenadas);
+                setCitas(citasOrdenadas);                
             } catch (error) {
                 console.error("Error al cargar las citas:", error);
                 setErrorMessage('Error al cargar las citas.');
@@ -34,7 +34,7 @@ export default function CardCitas() {
             try {
                 const response = await fetch(`http://localhost:3000/perros`);
                 const data = await response.json();
-                const perroDelUsuario = data.find(p => p.id_usuario === idUsuario);
+                const perroDelUsuario = data.find(p => String(p.id_usuario) === String(idUsuario));
                 setPerro(perroDelUsuario);
                 console.log(perroDelUsuario);
                 

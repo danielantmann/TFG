@@ -1,0 +1,85 @@
+{
+    "razas": [
+      {
+        "id": 1,
+        "nombre": "Pastor Alemán"
+      },
+      {
+        "id": 2,
+        "nombre": "Labrador Retriever"
+      },
+      {
+        "id": 3,
+        "nombre": "Golden Retriever"
+      },
+      {
+        "id": 4,
+        "nombre": "Bulldog Francés"
+      },
+      {
+        "id": 5,
+        "nombre": "Beagle"
+      },
+      {
+        "id": 6,
+        "nombre": "Poodle (Caniche)"
+      },
+      {
+        "id": 7,
+        "nombre": "Chihuahua"
+      },
+      {
+        "id": 8,
+        "nombre": "Rottweiler"
+      },
+      {
+        "id": 9,
+        "nombre": "Dachshund (Teckel)"
+      },
+      {
+        "id": 10,
+        "nombre": "Boxer"
+      },
+      {
+        "id": 11,
+        "nombre": "Yorkshire Terrier"
+      },
+      {
+        "id": 12,
+        "nombre": "Shih Tzu"
+      },
+      {
+        "id": 13,
+        "nombre": "Bulldog Inglés"
+      },
+      {
+        "id": 14,
+        "nombre": "Schnauzer"
+      },
+      {
+        "id": 15,
+        "nombre": "Cocker Spaniel"
+      },
+      {
+        "id": 16,
+        "nombre": "Pitbull"
+      },
+      {
+        "id": 17,
+        "nombre": "Doberman"
+      },
+      {
+        "id": 18,
+        "nombre": "Husky Siberiano"
+      },
+      {
+        "id": 19,
+        "nombre": "Maltés"
+      },
+      {
+        "id": 20,
+        "nombre": "Cavalier King Charles Spaniel"
+      }
+    ]
+  }
+  

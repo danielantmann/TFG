@@ -11,6 +11,7 @@ import CitasAdmin from './pages/CitasAdmin.jsx';
 
 import CalendarioAdmin from './components/CalendarioAdmin.jsx';
 import { Navigate } from 'react-router-dom';
+import Clientes from './pages/Clientes.jsx';
 
 function App() {
   const { usuario, idUsuario, loading } = useContext(UserContext); // Usa el usuario del contexto
@@ -30,6 +31,7 @@ function App() {
       <Route path="/buscar" element={usuario === 'admin' ? <BuscadorFichas /> : <Navigate to="/home" replace/>} />
       <Route path="/adminhome" element={usuario === 'admin' ? <HomeAdmin/> : <Navigate to="/home" replace/>} />
       <Route path="/adminalta" element={usuario === 'admin' ? <FormAltaAdmin/> : <Navigate to="/home" replace/>} />
+      <Route path="/clientes" element={usuario === 'admin' ? <Clientes/> : <Navigate to="/home" replace/>} />
       <Route path="/userhome" element={usuario === 'user' ? <HomeUser/> : <Navigate to="/home" replace/>} />
       <Route
         path="/admincitas"
