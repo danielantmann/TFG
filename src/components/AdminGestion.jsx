@@ -14,8 +14,8 @@ function AdminMain() {
                     <button type="button" className="btn btn-secondary btn-lg">Alta Cliente</button>
                     </Link>
              
-                    <Link>
-                    <button type="button" className="btn btn-secondary btn-lg">Baja Cliente</button>
+                    <Link to='/clientes'>
+                    <button type="button" className="btn btn-secondary btn-lg">Clientes</button>
                     </Link>
                     <Link>
                     <button type="button" className="btn btn-secondary btn-lg">Large button</button>

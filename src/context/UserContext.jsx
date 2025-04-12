@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-
     const [usuario, setUsuario] = useState('');
     const [idUsuario, setIdUsuario] = useState('');
     const [loading, setLoading] = useState(true);
@@ -41,4 +40,3 @@ export const UserProvider = ({ children }) => {
         </UserContext.Provider>
     );
 };
-

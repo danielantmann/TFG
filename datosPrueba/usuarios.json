@@ -9,10 +9,10 @@
     },
     {
       "id": "2",
-      "email": "user1@example.com",
+      "email": "juan1@example.com",
       "password": "user123",
       "role": "user",
-      "name": "Juan Pérez"
+      "name": "Juana Pérez"
     },
     {
       "id": "3",
@@ -32,14 +32,57 @@
       "id": "5",
       "email": "guesst@example.com",
       "password": "guest1233",
-      "role": "user"
+      "role": "user",
+      "name": "Carlos López"
     },
     {
-      "id": "231d",
-      "email": "pepe@pepe.com",
+      "id": "6",
+      "email": "user11@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "ASDASDASD"
+    },
+    {
+      "id": 7,
+      "email": "user211@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "dasd"
+    },
+    {
+      "id": 8,
+      "email": "user1111@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "das"
+    },
+    {
+      "id": 9,
+      "email": "adm1in@example.com",
       "password": "1234",
       "role": "user",
-      "name": "DANIEL ERIC ANTMANN"
+      "name": "asd"
+    },
+    {
+      "id": "1a39",
+      "email": "juan123@gmail.com",
+      "password": "1234",
+      "role": "user",
+      "name": "Juan"
+    },
+    {
+      "id": "56d2",
+      "email": "us1er1@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "Pepe"
+    },
+    {
+      "id": 605,
+      "email": "user21@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "aaa"
     }
   ]
 }

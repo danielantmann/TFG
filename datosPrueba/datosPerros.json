@@ -4,14 +4,15 @@
       "id": "1",
       "nombre": "Rex",
       "raza": "Pastor Alemán",
-      "id_usuario": 3,
-      "edad": 5
+      "fecha_nacimiento": "2018-05-12",
+      "id_usuario": 2,
+      "observaciones": "syy"
     },
     {
       "id": "2",
       "nombre": "Milo",
       "raza": "Beagle",
-      "edad": 3,
+      "fecha_nacimiento": "2020-07-22",
       "id_usuario": 3,
       "observaciones": "juan"
     },
@@ -19,17 +20,65 @@
       "id": "3",
       "nombre": "Luna",
       "raza": "Golden Retriever",
-      "edad": 2,
-      "id_usuario": 5,
+      "fecha_nacimiento": "2021-03-15",
+      "id_usuario": 2,
       "observaciones": "Se lleva bien con niños y otros perros."
     },
     {
-      "id": "3b9f",
-      "nombre": "Thor",
-      "raza": "Labrador",
-      "edad": "11",
-      "dueño": "Dani",
-      "observaciones": "sdfs"
+      "id": "d138",
+      "nombre": "Pedro",
+      "raza": "Rottweiler",
+      "fecha_nacimiento": "2023-04-11",
+      "id_usuario": "1a39",
+      "observaciones": "qq"
+    },
+    {
+      "id": "5dd5",
+      "nombre": "a",
+      "raza": "Beagle",
+      "fecha_nacimiento": "2025-04-01",
+      "id_usuario": "56d2",
+      "observaciones": "a"
+    },
+    {
+      "id": "9ed5",
+      "nombre": "ads",
+      "raza": "Beagle",
+      "fecha_nacimiento": "2025-04-01",
+      "id_usuario": 605,
+      "observaciones": "a"
+    },
+    {
+      "id": "f157",
+      "nombre": "f",
+      "raza": "Bulldog Francés",
+      "fecha_nacimiento": "2025-03-18",
+      "id_usuario": "f97f",
+      "observaciones": "f"
+    },
+    {
+      "id": "e347",
+      "nombre": "a",
+      "raza": "Poodle (Caniche)",
+      "fecha_nacimiento": "2025-04-01",
+      "id_usuario": "773c",
+      "observaciones": "a"
+    },
+    {
+      "id": "c114",
+      "nombre": "a",
+      "raza": "Husky Siberiano",
+      "fecha_nacimiento": "2025-04-01",
+      "id_usuario": "86b4",
+      "observaciones": "a"
+    },
+    {
+      "id": "2911",
+      "nombre": "perro",
+      "raza": "Chihuahua",
+      "fecha_nacimiento": "2025-04-01",
+      "id_usuario": "fbd9",
+      "observaciones": "a"
     }
   ]
 }

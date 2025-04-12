@@ -1,14 +1,20 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogInModal from './LogInModal';
+import RegisterModal from './RegisterModal';
 import { UserContext } from '../context/UserContext';
 
 export default function NavComponent() {
   const { usuario, handleLogout } = useContext(UserContext); // Consumo del contexto
   const [showLogInModal, setShowLogInModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
 
   const handleLogInModal = () => {
     setShowLogInModal(!showLogInModal);
+  };
+
+  const handleRegisterModal = () => {
+    setShowRegisterModal(!showRegisterModal);
   };
 
   return (
@@ -28,7 +34,7 @@ export default function NavComponent() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            
+
             <li className="nav-item">
               <Link className="nav-link" to="/servicios">Servicios</Link>
             </li>
@@ -42,8 +48,8 @@ export default function NavComponent() {
             )}
             {usuario === 'user' && (
               <li className="nav-item">
-              <Link className="nav-link" to="/userhome">Mi Perfil</Link>
-            </li>
+                <Link className="nav-link" to="/userhome">Mi Perfil</Link>
+              </li>
             )}
             <li className="nav-item">
               {usuario ? (
@@ -64,7 +70,17 @@ export default function NavComponent() {
         <LogInModal
           show={showLogInModal}
           handleLoginModal={handleLogInModal}
+          handleRegisterModal={handleRegisterModal}
         />
+      )}
+
+      {!usuario && showRegisterModal && (
+        <RegisterModal
+          show={showRegisterModal}
+          handleRegisterModal={handleRegisterModal}
+          toggleToLogin={handleLogInModal}
+        />
+
       )}
     </nav>
   );
