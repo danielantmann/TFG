@@ -8,9 +8,6 @@ import HomeAdmin from './pages/HomeAdmin.jsx';
 import HomeUser from './pages/HomeUser.jsx';
 import FormAltaAdmin from './pages/FormAltaAdmin.jsx';
 import CitasAdmin from './pages/CitasAdmin.jsx';
-
-import CalendarioAdmin from './components/CalendarioAdmin.jsx';
-import { Navigate } from 'react-router-dom';
 import Clientes from './pages/Clientes.jsx';
 
 function App() {
