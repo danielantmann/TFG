@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('start_time');
-            $table->dateTime('end_time');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->text('notes')->nullable();
             $table->decimal('final_price', 8, 2);
             $table->unsignedBigInteger('id_dog');

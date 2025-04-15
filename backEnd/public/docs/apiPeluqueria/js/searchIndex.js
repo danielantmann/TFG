@@ -161,11 +161,6 @@ Search.appendIndex(
             "summary": "Valida\u0020el\u0020inicio\u0020de\u0020sesi\u00F3n\u0020de\u0020un\u0020usuario.",
             "url": "classes/App-Http-Controllers-UserController.html#method_login"
         },                {
-            "fqsen": "\\App\\Http\\Controllers\\UserController\u003A\u003Alogout\u0028\u0029",
-            "name": "logout",
-            "summary": "Resumen\u0020de\u0020logout",
-            "url": "classes/App-Http-Controllers-UserController.html#method_logout"
-        },                {
             "fqsen": "\\App\\Http\\Controllers\\UserController\u003A\u003AgetAppointmentsByUser\u0028\u0029",
             "name": "getAppointmentsByUser",
             "summary": "Devuelve\u0020las\u0020citas\u0020de\u0020un\u0020usuario\u0020ordenadas\u0020por\u0020fecha.",

@@ -21,7 +21,7 @@ class AppointmentController extends Controller
     public function index()
     {
         try {
-            $appointment = Appointment::orderBy("created_at", "desc")->get();
+            $appointment = Appointment::orderBy("start_date", "desc")->get();
             return response()->json($appointment, 200);
         } catch (\Exception $e) {
             return response()->json([
@@ -48,8 +48,8 @@ class AppointmentController extends Controller
     {
         try {
             $validatedData = $request->validate([
-                'start_date' => 'required|date_format:d/m/Y H:i:s',
-                'end_date' => 'required|date_format:d/m/Y H:i:s',
+                'start_date' => 'required|date_format:Y-m-d H:i:s',
+                'end_date' => 'required|date_format:Y-m-d H:i:s',
                 'notes' => 'nullable|string',
                 'final_price' => 'required|numeric',
                 'id_dog' => 'required|integer|exists:dogs,id',
@@ -124,8 +124,8 @@ class AppointmentController extends Controller
     {
         try {
             $validatedData = $request->validate([
-                'start_date' => 'sometimes|date_format:d/m/Y H:i:s',
-                'end_date' => 'sometimes|date_format:d/m/Y H:i:s',
+                'start_date' => 'sometimes|date_format:Y-m-d H:i:s',
+                'end_date' => 'sometimes|date_format:Y-m-d H:i:s',
                 'notes' => 'sometimes|nullable|string',
                 'final_price' => 'sometimes|numeric',
                 'id_dog' => 'sometimes|integer|exists:dogs,id',

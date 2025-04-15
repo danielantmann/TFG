@@ -9,9 +9,9 @@ class Dog extends Model
     protected $fillable = [
         'name',
         'birth_date',
-        'weight',
-        'id_breed',
+        'notes',
         'id_user',
+        'id_breed',
     ];
     public function breed()
     {

@@ -60,10 +60,10 @@ class UserController extends Controller
             $user = User::create([
                 'name' => $validatedData['name'],
                 'last_name' => $validatedData['last_name'],
-                'email' => $validatedData['email'],
                 'password' => bcrypt($validatedData['password']),
                 'phone_number' => $validatedData['phone_number'],
                 'role' => $validatedData['role'],
+                'email' => $validatedData['email'],
             ]);
 
             return response()->json([
@@ -208,8 +208,8 @@ class UserController extends Controller
     /**
      * Valida el inicio de sesión de un usuario.
      *
-     * Este método verifica las credenciales proporcionadas (email y contraseña) y devuelve un token de autenticación
-     * si las credenciales son válidas. Si las credenciales no son válidas o ocurre un error, se devuelve un mensaje de error.
+     * Este método verifica las credenciales proporcionadas (email y contraseña) directamente contra la base de datos,
+     * si las credenciales no son válidas ocurre un error y se devuelve un mensaje de error.
      *
      * @param \Illuminate\Http\Request $request La solicitud HTTP con las credenciales del usuario.
      * @return \Illuminate\Http\JsonResponse Token de autenticación o mensaje de error.
@@ -222,18 +222,16 @@ class UserController extends Controller
                 'password' => 'required|string',
             ]);
 
-            if (!auth()->attempt($credentials)) {
+            $user = User::where('email', $credentials['email'])->first();
+
+            if (!$user || !\Hash::check($credentials['password'], $user->password)) {
                 return response()->json([
                     'error' => 'Credenciales inválidas'
                 ], 401);
             }
 
-            $user = auth()->user();
-            $token = $user->createToken('auth_token')->plainTextToken;
-
             return response()->json([
                 'message' => 'Inicio de sesión exitoso',
-                'token' => $token,
                 'user' => $user
             ], 200);
         } catch (\Illuminate\Validation\ValidationException $e) {
@@ -244,29 +242,6 @@ class UserController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 'error' => 'Error al iniciar sesión',
-                'message' => $e->getMessage(),
-            ], 500);
-        }
-    }
-    
-    /**
-     * Resumen de logout
-     * 
-     * Este método maneja la lógica para cerrar la sesión de un usuario.
-     * 
-     * @return mixed|\Illuminate\Http\JsonResponse Respuesta JSON indicando el resultado del cierre de sesión.
-     */
-    public function logout()
-    {
-        try {
-            auth()->user()->tokens()->delete();
-            
-            return response()->json([
-                'message' => 'Cierre de sesión exitoso'
-            ], 200);
-        } catch (\Exception $e) {
-            return response()->json([
-                'error' => 'Error al cerrar sesión',
                 'message' => $e->getMessage(),
             ], 500);
         }
@@ -290,7 +265,7 @@ class UserController extends Controller
         try {
             $user = User::findOrFail($id);
 
-            $appointments = $user->appointments()->orderBy('created_at', 'desc')->get();
+            $appointments = $user->appointments()->orderBy('start_date', 'desc')->get();
 
             return response()->json([
                 'message' => 'Citas recuperadas exitosamente',

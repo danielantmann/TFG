@@ -49,7 +49,7 @@ class DogController extends Controller
         try {
             $validatedData = $request->validate([
                 'name' => 'required|string|max:255',
-                'birth_date' => 'nullable|date_format:d/m/Y',
+                'birth_date' => 'nullable|date_format:Y-m-d',
                 'notes' => 'nullable|string',
                 'id_user' => 'required|integer|exists:users,id',
                 'id_breed' => 'required|integer|exists:breeds,id',
@@ -124,12 +124,12 @@ class DogController extends Controller
         try {
             $validatedData = $request->validate([
                 'name' => 'sometimes|required|string|max:255',
-                'birth_date' => 'sometimes|nullable|date_format:d/m/Y',
+                'birth_date' => 'sometimes|nullable|date_format:Y-m-d',
                 'notes' => 'sometimes|nullable|string',
                 'id_user' => 'sometimes|required|integer|exists:users,id',
                 'id_breed' => 'sometimes|required|integer|exists:breeds,id',
             ]);
-
+            
             $dog = Dog::findOrFail($id);
             $dog->update($validatedData);
 

@@ -49,9 +49,9 @@ class ServiceController extends Controller
         try {
             $validatedData = $request->validate([
                 'name' => 'required|string|max:255',
-                'price_small' => 'required|numeric|decimal:8,2',
-                'price_medium' => 'required|numeric|decimal:8,2',
-                'price_large' => 'required|numeric|decimal:8,2',
+                'price_small' => 'required|numeric|regex:/^\d{1,6}(\.\d{1,2})?$/',
+                'price_medium' => 'required|numeric|regex:/^\d{1,6}(\.\d{1,2})?$/',
+                'price_large' => 'required|numeric|regex:/^\d{1,6}(\.\d{1,2})?$/',
             ]);
 
             $service = Service::create($validatedData);

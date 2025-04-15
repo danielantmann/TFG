@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('small_price', 8, 2)->nullable();
-            $table->decimal('medium_price', 8, 2)->nullable();
-            $table->decimal('large_price', 8, 2)->nullable();
+            $table->decimal('price_small', 8, 2)->nullable();
+            $table->decimal('price_medium', 8, 2)->nullable();
+            $table->decimal('price_large', 8, 2)->nullable();
             $table->timestamps();
         });
     }

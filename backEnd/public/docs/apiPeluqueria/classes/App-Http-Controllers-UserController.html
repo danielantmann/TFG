@@ -185,13 +185,6 @@
 <dd>Valida el inicio de sesión de un usuario.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/App-Http-Controllers-UserController.html#method_logout">logout()</a>
-    <span>
-                                &nbsp;: mixed|<abbr title="\Illuminate\Http\JsonResponse">JsonResponse</abbr>    </span>
-</dt>
-<dd>Resumen de logout</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-UserController.html#method_show">show()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\JsonResponse">JsonResponse</abbr>    </span>
@@ -326,7 +319,7 @@ se devuelve un mensaje de error con el código de estado correspondiente.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/UserController.php"><a href="files/app-http-controllers-usercontroller.html"><abbr title="app/Http/Controllers/UserController.php">UserController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">288</span>
+    <span class="phpdocumentor-element-found-in__line">263</span>
 
     </aside>
 
@@ -489,8 +482,8 @@ se devuelve un mensaje de error con el código de estado correspondiente.</p>
     <div class="phpdocumentor-label-line">
         </div>
     
-        <section class="phpdocumentor-description"><p>Este método verifica las credenciales proporcionadas (email y contraseña) y devuelve un token de autenticación
-si las credenciales son válidas. Si las credenciales no son válidas o ocurre un error, se devuelve un mensaje de error.</p>
+        <section class="phpdocumentor-description"><p>Este método verifica las credenciales proporcionadas (email y contraseña) directamente contra la base de datos,
+si las credenciales no son válidas ocurre un error y se devuelve un mensaje de error.</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -515,51 +508,6 @@ si las credenciales son válidas. Si las credenciales no son válidas o ocurre u
         <span class="phpdocumentor-signature__response_type"><abbr title="\Illuminate\Http\JsonResponse">JsonResponse</abbr></span>
                     &mdash;
                 <section class="phpdocumentor-description"><p>Token de autenticación o mensaje de error.</p>
-</section>
-
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_logout">
-        logout()
-        <a href="classes/App-Http-Controllers-UserController.html#method_logout" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/UserController.php"><a href="files/app-http-controllers-usercontroller.html"><abbr title="app/Http/Controllers/UserController.php">UserController.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">259</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Resumen de logout</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">logout</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed|<abbr title="\Illuminate\Http\JsonResponse">JsonResponse</abbr></span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-        <section class="phpdocumentor-description"><p>Este método maneja la lógica para cerrar la sesión de un usuario.</p>
-</section>
-
-    
-    
-
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">mixed|<abbr title="\Illuminate\Http\JsonResponse">JsonResponse</abbr></span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>Respuesta JSON indicando el resultado del cierre de sesión.</p>
 </section>
 
             </section>
@@ -958,7 +906,6 @@ se devuelve un mensaje de error con el código de estado correspondiente.</p>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_getAppointmentsByUser">getAppointmentsByUser()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_index">index()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_login">login()</a></li>
-                                            <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_logout">logout()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_show">show()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_store">store()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_update">update()</a></li>
