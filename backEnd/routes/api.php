@@ -7,11 +7,10 @@
     use App\Http\Controllers\AppointmentController;
     
     
-    Route::resource('users', UserController::class);
+    Route::resource('user', UserController::class);
     Route::resource('breed', BreedController::class);
     Route::resource('dog', DogController::class);
     Route::resource('service', ServiceController::class);
     Route::resource('appointment', AppointmentController::class);
-    Route::get('/users/{id}/appointments', [UserController::class, 'getAppointmentsByUser']);
-    Route::post('/users/logout', [UserController::class, 'logout']);
-    Route::post('/users/login', [UserController::class, 'login']);
+    Route::get('/user/{id}/appointments', [UserController::class, 'getAppointmentsByUser']);
+    Route::post('/user/login', [UserController::class, 'login']);
